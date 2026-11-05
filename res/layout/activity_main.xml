@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="32dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorHeader"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MedReminder"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halo, Pengguna!"
+                android:textSize="14sp"
+                android:textColor="@color/colorHeaderText"
+                android:paddingTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Kartu Info Obat -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INFORMASI OBAT"
+                android:textSize="11sp"
+                android:textColor="@color/colorLabel"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:paddingBottom="10dp"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingBottom="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Nama Obat  " android:textSize="13sp" android:textColor="@color/colorLabel"/>
+                <TextView android:id="@+id/tv_obat" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:paddingBottom="8dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Dosis         " android:textSize="13sp" android:textColor="@color/colorLabel"/>
+                <TextView android:id="@+id/tv_dosis" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="-"
+                    android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Jam Minum  " android:textSize="13sp" android:textColor="@color/colorLabel"/>
+                <TextView android:id="@+id/tv_jam" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="08:00"
+                    android:textSize="13sp" android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Kartu Notifikasi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Pengingat Notifikasi" android:textSize="14sp"
+                    android:textStyle="bold" android:textColor="@color/colorTextPrimary"/>
+                <TextView android:id="@+id/tv_status_notif" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Aktif"
+                    android:textSize="12sp" android:textColor="#4CAF50" android:paddingTop="2dp"/>
+            </LinearLayout>
+
+            <Switch android:id="@+id/sw_notif" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:checked="true"/>
+        </LinearLayout>
+
+        <!-- Tombol Sudah Minum -->
+        <Button
+            android:id="@+id/btn_sudah_minum"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Sudah Minum Obat Hari Ini"
+            android:backgroundTint="@color/colorHeader"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btn_pengaturan"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Pengaturan"
+            android:backgroundTint="@color/colorButtonSecondary"
+            android:textColor="@color/colorButtonSecondaryText"
+            android:textSize="14sp"
+            android:layout_marginBottom="20dp"/>
+        <!-- Kartu Riwayat -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="RIWAYAT MINUM OBAT" android:textSize="11sp"
+                android:textColor="@color/colorLabel" android:textAllCaps="true"
+                android:letterSpacing="0.1" android:paddingBottom="4dp"/>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="disimpan di database lokal" android:textSize="10sp"
+                android:textColor="@color/colorLabel" android:paddingBottom="10dp"/>
+
+            <TextView android:id="@+id/tv_riwayat" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Belum ada riwayat minum obat."
+                android:textSize="13sp" android:textColor="@color/colorTextSecondary"
+                android:lineSpacingExtra="6dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingBottom="32dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorHeader"
+            android:padding="20dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengaturan"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorTextPrimary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data disimpan di SharedPreferences"
+                android:textSize="12sp"
+                android:textColor="@color/colorHeaderText"
+                android:paddingTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Form Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DATA PENGGUNA"
+                android:textSize="11sp"
+                android:textColor="@color/colorLabel"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:paddingBottom="12dp"/>
+
+            <!-- Nama -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Kamu"
+                android:textSize="12sp"
+                android:textColor="@color/colorTextSecondary"
+                android:paddingBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/et_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukkan nama kamu"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Nama Obat -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Obat"
+                android:textSize="12sp"
+                android:textColor="@color/colorTextSecondary"
+                android:paddingBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/et_obat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contoh: Paracetamol 500mg"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Dosis -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dosis"
+                android:textSize="12sp"
+                android:textColor="@color/colorTextSecondary"
+                android:paddingBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/et_dosis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contoh: 1 tablet, 3x sehari"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+        </LinearLayout>
+
+        <!-- Jam Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JAM MINUM OBAT"
+                android:textSize="11sp"
+                android:textColor="@color/colorLabel"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:paddingBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_jam_dipilih"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08:00"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:paddingBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btn_pilih_jam"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Ubah Jam"
+                android:backgroundTint="@color/colorButtonSecondary"
+                android:textColor="@color/colorHeader"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <!-- Dark Mode Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mode Gelap"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:textColorPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disimpan di SharedPreferences"
+                    android:textSize="11sp"
+                    android:textColor="@color/colorLabel"
+                    android:paddingTop="2dp"/>
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/sw_dark_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Tombol -->
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Simpan Pengaturan"
+            android:backgroundTint="@color/colorHeader"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Kembali"
+            android:backgroundTint="@color/colorTextPrimary"
+            android:textColor="@color/colorLabel"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</ScrollView>

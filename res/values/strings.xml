@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MedReminder</string>
+    <string name="greeting">Halo, Pengguna! 👋</string>
+    <string name="med_not_set">Belum diatur</string>
+    <string name="settings">Pengaturan</string>
+    <string name="save">Simpan Pengaturan</string>
+    <string name="notif_active">🔔 Notifikasi Aktif</string>
+    <string name="notif_inactive">🔕 Notifikasi Nonaktif</string>
+</resources>
